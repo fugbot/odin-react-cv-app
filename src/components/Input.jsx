@@ -9,6 +9,10 @@ export default function Input({
   ariaDescribedBy,
   ariaInvalid,
   required,
+  labelClassName,
+  inputClassName,
+  wrapperClassName,
+  ...props
 }) {
   function handleChange(e) {
     e.preventDefault();
@@ -16,8 +20,10 @@ export default function Input({
   }
 
   return (
-    <label htmlFor={id}>
-      {label}
+    <div className={wrapperClassName}>
+      <label htmlFor={id} className={labelClassName}>
+        {label}
+      </label>
       <input
         id={id}
         name={name}
@@ -28,7 +34,9 @@ export default function Input({
         aria-describedby={ariaDescribedBy}
         aria-invalid={ariaInvalid}
         required={required}
+        className={inputClassName}
+        {...props}
       />
-    </label>
+    </div>
   );
 }

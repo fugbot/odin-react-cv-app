@@ -21,7 +21,7 @@ export default function Form({ fields, onSubmit, title }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <h2>{title}</h2>
       {fields.map((field) => (
         <Input
@@ -32,6 +32,9 @@ export default function Form({ fields, onSubmit, title }) {
           type={field.type}
           value={formData[field.value]}
           onChange={handleChange}
+          labelClassName="input-label"
+          inputClassName="input-field"
+          wrapperClassName="input-wrapper"
         ></Input>
       ))}
       <button type="submit">Submit</button>
