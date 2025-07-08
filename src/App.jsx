@@ -8,6 +8,7 @@ import Education from "./components/EducationForm";
 function App() {
   const [generalFormData, setGeneralFormData] = useState(null);
   const [educationFormData, setEducationFormData] = useState(null);
+  const [jobFormData, setJobFormData] = useState(null);
 
   console.log(generalFormData);
   console.log(educationFormData);
@@ -15,28 +16,29 @@ function App() {
     <>
       <div className="form-container" id="general-form">
         <Form
-          title="General"
+          title="Personal Details"
+          autoComplete="on"
           fields={[
             {
-              id: "first-name",
+              id: "firstName",
               name: "firstName",
               type: "text",
               label: "First Name: ",
             },
             {
-              id: "last-name",
+              id: "lastName",
               name: "lastName",
               type: "text",
               label: "Last Name: ",
             },
             {
-              id: "user-email",
+              id: "email",
               name: "email",
               type: "email",
               label: "Email: ",
             },
             {
-              id: "user-phone",
+              id: "phone",
               name: "phone",
               type: "tel",
               label: "Phone: ",
@@ -63,7 +65,7 @@ function App() {
             },
             {
               id: "edu-date",
-              name: "date",
+              name: "eduDate",
               type: "date",
               label: "Date: ",
             },
@@ -88,25 +90,26 @@ function App() {
               label: "Position: ",
             },
             {
-              id: "job-responsibility",
-              name: "responsibility",
-              type: "date",
+              id: "job-responsibilities",
+              name: "responsibilities",
+              type: "text",
               label: "Responsibilities: ",
             },
             {
               id: "job-date",
-              name: "date",
+              name: "jobDate",
               type: "date",
               label: "Date: ",
             },
           ]}
-          onSubmit={setEducationFormData}
+          onSubmit={setJobFormData}
         ></Form>
       </div>
       <h1>Resume</h1>
 
       {generalFormData && <Resume data={generalFormData} />}
       {educationFormData && <Resume data={educationFormData} />}
+      {jobFormData && <Resume data={jobFormData} />}
     </>
   );
 }

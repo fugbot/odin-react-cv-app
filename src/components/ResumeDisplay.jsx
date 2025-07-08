@@ -13,7 +13,14 @@ function Resume({ data }) {
       <div>
         <p>{data.school}</p>
         <p>{data.title}</p>
-        <p>{data.date}</p>
+        <p>{data.eduDate}</p>
+      </div>
+
+      <div>
+        <p>{data.company}</p>
+        <p>{data.position}</p>
+        <p>{data.responsibilities}</p>
+        <p>{data.jobDate}</p>
       </div>
     </>
   );
