@@ -26,6 +26,27 @@
   }
 }
 
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    flex: 1;
+  }
+}
+
+.app-container {
+  display: flex;
+  /* 95% of viewport width, uses whichever one is smallest */
+  max-width: min(1200px, 95vw);
+  gap: 2rem;
+}
+
+.wrapper {
+  flex: 1;
+}
+
 h2 {
   font-size: large;
   margin: 0.25rem;
