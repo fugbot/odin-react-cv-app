@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Input from "./Input";
+import "../styles/index.css";
 
-export default function Form({ fields, onSubmit, title }) {
+export default function Form({ title, fields, onSubmit }) {
   //creates initial form data
   const [formData, setFormData] = useState(
     fields.reduce((accumulator, field) => {
