@@ -1,13 +1,10 @@
 function Resume({ data }) {
-  console.log("resume", data);
   return (
     <>
-      <div>
-        <p>
+      <div className="name-wrapper">
+        <h2>
           {data.firstName} {data.lastName}
-        </p>
-        <p>{data.email}</p>
-        <p>{data.phone}</p>
+        </h2>
       </div>
 
       <div>

@@ -1,0 +1,26 @@
+.wrapper.resume {
+  border: solid 2px blue;
+  box-shadow: 10px 5px 5px rgb(170, 169, 169);
+}
+
+.personal.section {
+  background-color: darkblue;
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.name-wrapper h2 {
+  font-size: 2.5rem;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.email-wrapper,
+.phone-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
